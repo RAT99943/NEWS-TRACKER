@@ -132,7 +132,7 @@ a:hover {
 
 .match-time-info { flex-basis: 18%; text-align: left; }
 .tournament-name { font-size: 0.8em; color: var(--color-light-text); }
-.match-time, .live-time { font-size: 1em; font-weight: 700; }
+.match-time, { font-size: 1em; font-weight: 700; }
 
 .teams {
     flex-grow: 1;
@@ -160,7 +160,7 @@ a:hover {
     min-width: 130px;
 }
 
-.match-card.live .live-time { color: var(--color-red); font-size: 20px }
+.match-card.live .live-time { color: var(--color-red);}
 .match-card.upcoming .watch-link { background-color: var(--color-dark-bg); border: 1px solid var(--color-red); color: var(--color-red); }
 
 .live-badge {
@@ -173,6 +173,10 @@ a:hover {
     margin-right: 15px;
     min-width: 50px;
     text-align: center;
+}
+
+.live-time {
+	font-size: 20px;
 }
 
 .full-schedule-link {
@@ -314,4 +318,5 @@ a:hover {
     .navbar nav { display: none; }
     .navbar { justify-content: center; }
 }
+
 
