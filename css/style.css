@@ -160,7 +160,7 @@ a:hover {
     min-width: 130px;
 }
 
-.match-card.live .live-time { color: var(--color-red); }
+.match-card.live .live-time { color: var(--color-red); font-size: 20px }
 .match-card.upcoming .watch-link { background-color: var(--color-dark-bg); border: 1px solid var(--color-red); color: var(--color-red); }
 
 .live-badge {
@@ -314,3 +314,4 @@ a:hover {
     .navbar nav { display: none; }
     .navbar { justify-content: center; }
 }
+
