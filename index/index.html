@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 NEWS TRACKER | СНГ-Фокус</title>
+    <link rel="stylesheet" href="\CSNT\css\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">CS <span style="color: #FF3333;">NEWS TRACKER</span></div>
+        <nav>
+            <a href="#">Матчи</a>
+            <a href="#">Результаты</a>
+            <a href="#">Новости</a>
+            <a href="#" class="active">Трансляции</a>
+        </nav>
+        <div class="search-area">
+            <input type="text" placeholder="Поиск..." class="search-input">
+            <button class="search-btn">🔍</button>
+        </div>
+    </header>
+
+    <div class="main-layout-container">
+
+        <aside class="sidebar left-sidebar">
+            <div class="stat-panel">
+                <h3 class="panel-title">🏆 ТОП СНГ-КОМАНД</h3>
+                <div class="panel-content">
+                    <div class="ranking-item">
+                        <span class="rank">1.</span>
+                        <img src="E:\CSNT\img\PV.png" class="stat-icon" alt="Team Logo"> 
+                        <span class="stat-name">PARIVISION</span>
+                        <span class="stat-value">KAST 82%</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">2.</span>
+                        <img src="E:\CSNT\img\Spirit.png" class="stat-icon" alt="Team Logo">
+                        <span class="stat-name">Team Spirit</span>
+                        <span class="stat-value">KAST 79%</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">3.</span>
+                        <img src="E:\CSNT\img\HOTU.png" class="stat-icon" alt="Team Logo">
+                        <span class="stat-name">HOTU</span>
+                        <span class="stat-value">KAST 77%</span>
+                    </div>
+                    <a href="#" class="full-link">Полный СНГ-рейтинг →</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="center-content">
+
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        ВСЕ СЕГОДНЯШНИЕ МАТЧИ CS2 НИЧЕГО ЛИШНЕГО
+                    </h1>
+                    <p class="hero-subtitle">
+                        Свежее расписание, коэффициенты и прямые ссылки на стримы
+                    </p>
+                    <button class="cta-button" id="cta-main">
+                        🔥 СМОТРЕТЬ БЛИЖАЙШИЙ МАТЧ
+                    </button>
+                </div>
+            </div>
+
+            <section class="matches-section">
+                <h2>МАТЧИ</h2>
+                
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="today">СЕГОДНЯ</button>
+                    <button class="tab-button" data-tab="tomorrow">ЗАВТРА</button>
+                </div>
+
+                <div id="matches-container">
+
+                    <div class="match-card live">
+                        <span class="live-badge">LIVE</span>
+                        <div class="match-time-info">
+                            <div class="tournament-name">ESL Pro League Season 23</div>
+                            <div class="match-time"></div>
+                        </div>
+                        <div class="teams">
+                            <div class="team team-a">
+                                <img src="E:\CSNT\img\PV.png" class="team-icon" alt="PARIVISION Logo">
+                                <span class="team-name">PARIVISION</span>
+                            </div>
+                            <div class="score">10</div>
+                            <div class="vs-divider">VS</div>
+                            <div class="score">8</div>
+                            <div class="team team-b">
+                                <img src="E:\CSNT\img\Falcons.png" class="team-icon" alt="Falcons Logo">
+                                <span class="team-name-b">Falcons</span>
+                            </div>
+                        </div>
+                        <a href="#" target="_blank" class="watch-link">СМОТРЕТЬ ТРАНСЛЯЦИЮ</a>
+                    </div>
+
+                    <div class="match-card upcoming">
+                        <span class="live-badge"></span>
+                        <div class="match-time-info">
+                            <div class="tournament-name">IZI WEX Season 1</div>
+                            <div class="match-time">20:00</div>
+                        </div>
+                        <div class="teams">
+                            <div class="team team-a">
+                                <img src="E:\CSNT\img\WW.png" class="team-icon" alt="WW Team Logo">
+                                <span class="team-name">WW Team</span>
+                            </div>
+                            <div class="live-time">20:00</div>
+                            <div class="team team-b">
+                                <img src="E:\CSNT\img\TDK.png" class="team-icon" alt="TDK Logo">
+                                <span class="team-name-b">TDK</span>
+                            </div>
+                        </div>
+                        <a href="#" target="_blank" class="watch-link grey-link">Ожидается</a>
+                    </div>
+
+                    <div class="match-card upcoming">
+                        <span class="live-badge"></span>
+                        <div class="match-time-info">
+                            <div class="tournament-name">PGL Astana 2026</div>
+                            <div class="match-time">23:00</div>
+                        </div>
+                        <div class="teams">
+                            <div class="team team-a">
+                                <img src="E:\CSNT\img\HOTU.png" class="team-icon" alt="HOTU Logo">
+                                <span class="team-name">HOTU</span>
+                            </div>
+                            <div class="live-time">23:00</div>
+                            <div class="team team-b">
+                                <img src="E:\CSNT\img\Aurora.png" class="team-icon" alt="AURORA Logo">
+                                <span class="team-name">AURORA</span>
+                            </div>
+                        </div>
+                        <a href="#" target="_blank" class="watch-link grey-link">Ожидается</a>
+                    </div>
+
+                </div>
+                
+                <div class="full-schedule-link">
+                    <a href="#">ПОСМОТРЕТЬ ПОЛНОЕ РАСПИСАНИЕ →</a>
+                </div>
+            </section>
+            
+        </main>
+
+        <aside class="sidebar right-sidebar">
+            <div class="stat-panel">
+                <h3 class="panel-title">⭐ ТОП ИГРОКОВ (HLTV)</h3>
+                <div class="panel-content">
+
+                    <div class="ranking-item player-item">
+                        <span class="rank">1.</span>
+                        <img src="E:\CSNT\img\Sh1ro.png" class="stat-icon player-icon" alt="Player Avatar">
+                        <span class="stat-name">sh1ro</span>
+                        <span class="stat-value">Rating 1.42</span>
+                    </div>
+                    <div class="ranking-item player-item">
+                        <span class="rank">2.</span>
+                        <img src="E:\CSNT\img\Monesy.png" class="stat-icon player-icon" alt="Player Avatar">
+                        <span class="stat-name">m0NESY</span>
+                        <span class="stat-value">Rating 1.33</span>
+                    </div>
+                     <div class="ranking-item player-item">
+                        <span class="rank">3.</span>
+                        <img src="E:\CSNT\img\Donk.png" class="stat-icon player-icon" alt="Player Avatar">
+                        <span class="stat-name">donk</span>
+                        <span class="stat-value">Rating 1.32</span>
+                    </div>
+                    <a href="#" class="full-link">Полный рейтинг игроков →</a>
+                </div>
+            </div>
+        </aside>
+        
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">CS2 NEWS TRACKER</div>
+            <div class="footer-links">
+                <a href="https://t.me/cs3news">Контакты (Telegram)</a>
+                <a href="#">FAQ</a>
+                <a href="#">Правовая информация</a>
+            </div>
+        </div>
+        <p class="copyright">© 2026 CS2 NEWS TRACKER. Только СНГ-контент.</p>
+    </footer>
+
+</body>
+</html>
