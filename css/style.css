@@ -1,13 +1,12 @@
-/* --- 0. ГЛОБАЛЬНЫЕ СБРОСЫ И ПЕРЕМЕННЫЕ --- */
 :root {
     --color-dark-bg: #121212;
     --color-mid-dark: #1E1E1E;
-    --color-light-bg: #2C2C2C; /* Фон для боковых панелей и карточек */
-    --color-card-bg: #252525; /* Фон для неактивных карточек матчей */
+    --color-light-bg: #2C2C2C; 
+    --color-card-bg: #252525; 
     --color-red: #FF3333; 
     --color-text: #E0E0E0;
     --color-light-text: #AAAAAA;
-    --sidebar-width: 280px; /* Фиксированная ширина боковых панелей */
+    --sidebar-width: 280px; 
 }
 
 * {
@@ -33,9 +32,6 @@ a:hover {
     color: var(--color-red);
 }
 
-/* ==================================================== */
-/* 1. НАВИГАЦИЯ (ФИКСИРОВАННАЯ) */
-/* ==================================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -43,11 +39,11 @@ a:hover {
     padding: 15px 40px;
     background-color: var(--color-mid-dark);
     border-bottom: 1px solid var(--color-light-bg);
-    position: sticky; /* Делаем навигацию прилипающей */
+    position: sticky;
     top: 0;
     z-index: 100;
 }
-/* ... (Остальные стили navbar как раньше) ... */
+
 .logo { font-size: 1.4em; font-weight: 900; }
 .navbar nav a { margin: 0 15px; font-weight: 500; }
 .navbar nav a.active { color: var(--color-red); font-weight: 700; }
@@ -55,36 +51,27 @@ a:hover {
 .search-input { padding: 5px 10px; border: none; background-color: var(--color-dark-bg); color: var(--color-text); border-radius: 4px 0 0 4px; }
 .search-btn { background-color: var(--color-red); color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 0 4px 4px 0; }
 
-
-/* ==================================================== */
-/* 2. ОСНОВНОЙ МАКЕТ: ТРЕХКОЛОНОЧНАЯ СЕТКА */
-/* ==================================================== */
-
 .main-layout-container {
     display: grid;
-    grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width); /* 280px | Центр | 280px */
+    grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
     gap: 0;
-    min-height: calc(100vh - 120px); /* Высота контента, чтобы футер был внизу */
+    min-height: calc(100vh - 120px);
 }
 
-/* ЦЕНТРАЛЬНЫЙ КОНТЕНТ (Прокручиваемый) */
 .center-content {
-    /* Элементы внутри будут прокручиваться */
+
     overflow-x: hidden;
 }
 
-/* САЙДБАРЫ (Фиксированные) */
 .sidebar {
     padding: 20px 20px;
     background-color: var(--color-mid-dark);
-    /* Фиксируем сайдбары на месте, пока контент прокручивается */
     position: sticky;
-    top: 65px; /* Смещаем вниз, чтобы не перекрывать навигацию */
-    height: calc(100vh - 65px); /* Занимает всю высоту окна минус шапка */
-    overflow-y: auto; /* Если контент в сайдбаре станет слишком длинным */
+    top: 65px; 
+    height: calc(100vh - 65px);
+    overflow-y: auto; 
 }
 
-/* Стили для разделения: ЛЕВАЯ/ПРАВАЯ */
 .left-sidebar {
     border-right: 1px solid var(--color-light-bg);
 }
@@ -93,17 +80,13 @@ a:hover {
     border-left: 1px solid var(--color-light-bg);
 }
 
-
-/* ==================================================== */
-/* 3. СТИЛИ ДЛЯ HERO SECTION (Остаются в центре) */
-/* ==================================================== */
 .hero-section {
-    height: 350px; /* Сделаем чуть ниже */
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px 20px 0 20px; /* Уменьшаем отступ сверху, т.к. шапка стала фиксированной */
+    padding: 40px 20px 0 20px;
     background-color: #0a0a0a; 
 }
 .hero-title { font-size: 3em; text-transform: uppercase; font-weight: 900; margin-bottom: 15px; line-height: 1.1; }
@@ -111,30 +94,24 @@ a:hover {
 .cta-button { background-color: var(--color-red); color: white; border: none; padding: 15px 35px; font-size: 1.1em; font-weight: 700; cursor: pointer; border-radius: 5px; transition: background-color 0.3s, transform 0.2s; }
 .cta-button:hover { background-color: #FF0000; transform: scale(1.02); }
 
-
-/* ==================================================== */
-/* 4. СТИЛИ ДЛЯ БЛОКА МАТЧЕЙ (Остается в центре) */
-/* ==================================================== */
 .matches-section {
-    padding: 40px 20px 60px 20px; /* Добавим отступ снизу для красоты */
-    background-color: var(--color-dark-bg); /* Фон центральной части */
+    padding: 40px 20px 60px 20px; 
+    background-color: var(--color-dark-bg); 
 }
 
 .matches-section h2 {
     font-size: 2em;
-    margin-bottom: 20px; /* Немного уменьшил отступ */
+    margin-bottom: 20px;
     color: var(--color-red);
     border-bottom: 2px solid var(--color-red);
     display: inline-block;
     padding-bottom: 5px;
 }
 
-/* Табы */
 .tabs { margin-bottom: 20px; }
 .tab-button { background: none; border: 1px solid var(--color-light-bg); color: var(--color-light-text); padding: 10px 20px; cursor: pointer; margin-right: 10px; border-radius: 4px; transition: all 0.3s; }
 .tab-button.active { background-color: var(--color-red); color: white; border-color: var(--color-red); }
 
-/* Карточки Матчей */
 #matches-container {
     display: flex;
     flex-direction: column;
@@ -149,11 +126,9 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-	background-color: var(--color-card-bg); /* Используем более темный фон для карточек */
+	background-color: var(--color-card-bg);
 }
 .match-card.live { border-left-color: var(--color-red); }
-
-/* ... (Стили для match-time-info, teams, score и т.д. ОСТАВЛЯЕМ КАК В ПРЕДЫДУЩЕМ ОТВЕТЕ) ... */
 
 .match-time-info { flex-basis: 18%; text-align: left; }
 .tournament-name { font-size: 0.8em; color: var(--color-light-text); }
@@ -208,17 +183,11 @@ a:hover {
     color: var(--color-red);
     font-weight: 700;
 }
-
-
-/* ==================================================== */
-/* 5. СТИЛИ ДЛЯ РЕЙТИНГОВ (Сайдбары) */
-/* ==================================================== */
-
 .stat-panel {
     background-color: var(--color-light-bg);
     padding: 20px;
     border-radius: 8px;
-    margin-bottom: 30px; /* Отступ между блоками в сайдбаре */
+    margin-bottom: 30px;
 }
 
 .panel-title {
@@ -287,27 +256,19 @@ a:hover {
     color: var(--color-red);
 }
 
-
-/* ==================================================== */
-/* 6. ФУТЕР И АДАПТИВНОСТЬ */
-/* ==================================================== */
-
 .footer {
     background-color: var(--color-mid-dark);
     padding: 30px 40px;
     color: var(--color-light-text);
     border-top: 3px solid var(--color-red);
 }
-/* ... (Стили футера остаются прежними) ... */
+
 .footer-content { display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto 15px; }
 .footer-brand { font-weight: 900; font-size: 1.2em; color: white; }
 .footer-links a { margin-left: 20px; font-size: 0.9em; }
 .copyright { text-align: center; font-size: 0.8em; }
 
-
-/* АДАПТИВНОСТЬ ДЛЯ ТРЕХКОЛОНОЧНОЙ СЕТКИ */
 @media (max-width: 1300px) {
-    /* Когда экран сужается, делаем сайдбары уже, чтобы дать больше места центру */
     :root {
         --sidebar-width: 200px; 
     }
@@ -316,35 +277,32 @@ a:hover {
 }
 
 @media (max-width: 992px) {
-    /* На планшетах и меньших устройствах: убираем фиксированные сайдбары и делаем их прокручиваемыми */
     
     .main-layout-container {
-        grid-template-columns: 1fr; /* Теперь одна колонка */
+        grid-template-columns: 1fr; 
     }
     
     .sidebar {
-        position: static; /* Убираем фиксацию */
+        position: static;
         height: auto;
         overflow-y: visible;
         padding: 20px;
     }
-    
-    /* Сдвигаем сайдбары в конец прокручиваемой области, чтобы они шли ПОСЛЕ матчей */
+
     .left-sidebar {
-        order: 3; /* 1: Hero, 2: Matches, 3: Left Sidebar */
+        order: 3; 
         border-right: none;
         border-top: 3px solid var(--color-mid-dark);
     }
     .right-sidebar {
-        order: 4; /* 4: Right Sidebar */
+        order: 4; 
         border-left: none;
         border-top: 3px solid var(--color-mid-dark);
     }
     .center-content {
-        order: 2; /* Центральный контент идет следом за Hero, но перед бывшими сайдбарами */
+        order: 2;
     }
-    
-    /* Стили для матчей, которые работали в старом макете, остаются */
+
     .match-card { flex-wrap: wrap; padding: 15px; }
     .match-time-info { flex-basis: 100%; margin-bottom: 10px; }
     .teams { flex-basis: 100%; justify-content: space-between; padding: 0; }
@@ -355,5 +313,4 @@ a:hover {
     .hero-title { font-size: 2em; }
     .navbar nav { display: none; }
     .navbar { justify-content: center; }
-    /* ... остальная мобильная стилизация ... */
 }
