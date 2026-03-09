@@ -176,7 +176,8 @@ a:hover {
 }
 
 .live-time {
-	font-size: 20px;
+	font-size: 25px;
+	font-weight: 600;
 }
 
 .full-schedule-link {
@@ -318,5 +319,6 @@ a:hover {
     .navbar nav { display: none; }
     .navbar { justify-content: center; }
 }
+
 
 
